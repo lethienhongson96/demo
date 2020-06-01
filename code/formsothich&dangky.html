@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formdongian</title>
+    <style>
+        form{
+            margin-left: 550px;
+        }
+        .color{
+            color: darkblue;
+        }
+        .text{
+            color: darksalmon;
+        }
+        .submit {
+            cursor:pointer;
+        }
+        
+    </style>
+</head>
+
+<body class="body">
+    <form method="GET" >
+        <table>
+            <tr>
+                <th colspan="4" style="text-align: center;background-color: chocolate;">sở thích của bạn</th>
+            </tr>
+            <tr>
+                <td class="color">họ và tên</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td class="color">email</td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td class="color">sở thích</td>
+                <td class="text">
+                    <input type="checkbox">thể thao
+                </td>
+                <td class="text">
+                    <input type="checkbox">âm nhạc
+                </td>
+                <td class="text">
+                    <input type="checkbox">đọc sách
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text"><input type="checkbox" name="web">lướt web</td>
+                <td class="text"><input type="checkbox">chơi game</td>
+                <td class="text"><input type="checkbox">điện ảnh</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text"><input type="checkbox">du lịch</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="đăng nhập" class="submit"></td>
+                <td><input type="reset" value="nhập lại"></td>
+            </tr>
+        </table>
+</form>
+</body>
+
+</html>

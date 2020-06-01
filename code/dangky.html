@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            margin-left: 550px;
+        }
+        table{
+            background-color: darkkhaki;
+        }
+        th{
+            color: darkblue;
+            font-size: 30px;
+            background-color: darkcyan;
+        }
+        .submit{
+            cursor: pointer;
+        }
+
+        .submit:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET" class="form">
+        <table>
+            <tr>
+                <th colspan="2" style="text-align: center;">đăng ký học viên</th>
+            </tr>
+            <tr>
+                <td>họ và tên</td>
+                <td><input type="text" name="name" ></td>
+            </tr>
+            <tr>
+                <td>ngày sinh</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>giới tính</td>
+                <td><input type="radio" name="gen">nam<input type="radio" name="gen">nữ</td>
+            </tr>
+            <tr>
+                <td>địa chỉ</td>
+                <td><textarea cols='20' rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td>lớp</td>
+                <td><select name="" id="">
+                    <option value="">chọn lớp</option>
+                    <option value="">1</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>điện thoại</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="đăng ký" class="submit"> <input type="reset" value="nhập lại" class="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
