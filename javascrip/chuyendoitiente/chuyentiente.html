@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            width: 70px;  
+        }
+    </style>
+</head>
+<body>
+    <form method="GET">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th></th>
+                <th>From Currency</th>
+                <th></th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="soluong"></td>
+                <td></td>
+                <td>
+                    <select name="from">
+                        <option value="vn">việt nam</option>
+                    </select>
+                </td>
+                <td></td>
+                <td>
+                    <select name="to">
+                        <option value="us">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="showresult();">convert</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="resulttext"></div>
+    <script>
+        function showresult()
+        {
+            inputamount=document.getElementById("soluong").value;
+            amount=parseInt(inputamount);
+            let result=amount/23000;
+            document.getElementById('resulttext').innerHTML=result+" USD";
+        }
+    </script>
+</body>
+</html>
