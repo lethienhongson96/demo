@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <p><input type="text" id="a"> <input type="text" id="b"></p>
+    <button id="cong" onclick="hamcong();">addition(+)</button>
+    <button id="tru" onclick="hamtru();">subtraction(-)</button>
+    <button id="nhan" onclick="hamnhan();">multiplication(x)</button>
+    <button id="chia" onclick="hamchia();">division(/)</button> <br>
+    <div id="ketqua"></div>
+    <script>
+        function hamcong(){
+            let inputa=document.getElementById("a").value;
+            let inputb=document.getElementById("b").value;
+            let a=parseInt(inputa);
+            let b=parseInt(inputb);
+            let dapso=a+b;
+            document.getElementById("ketqua").innerHTML='result division: '+ dapso;
+        }
+        function hamtru(){
+            let inputa=document.getElementById("a").value;
+            let inputb=document.getElementById("b").value;
+            let a=parseInt(inputa);
+            let b=parseInt(inputb);
+            let dapso=a-b;
+            document.getElementById("ketqua").innerHTML='result division: '+ dapso;
+        }
+        function hamnhan(){
+            let inputa=document.getElementById("a").value;
+            let inputb=document.getElementById("b").value;
+            let a=parseInt(inputa);
+            let b=parseInt(inputb);
+            let dapso=a*b;
+            document.getElementById("ketqua").innerHTML='result division: '+dapso;
+        }
+        function hamchia(){
+            let inputa=document.getElementById("a").value;
+            let inputb=document.getElementById("b").value;
+            let a=parseInt(inputa);
+            let b=parseInt(inputb);
+            let dapso=a/b;
+            document.getElementById("ketqua").innerHTML='result division: '+dapso;
+        }
+    </script>
+</body>
+</html>
