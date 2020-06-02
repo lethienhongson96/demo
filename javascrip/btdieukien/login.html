@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tk=prompt("mời nhập tài khoản",'');
+        if(tk=='admin'){
+            xuli();
+        }
+        else{
+            alert('sai tài khoản !');
+        }
+        function xuli(){
+            let pass=prompt("mời nhập mật khẩu",'');
+            if(pass=='admin'){
+                alert("xin chào !");
+            }
+            else{
+                alert('sai mật khẩu');
+            }
+        }
+    </script>
+</body>
+</html>
