@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="ready()">
+    <img src="nobita.jpg" id="img-nobita" style="position:absolute;left:0; 
+    top:0;" height="100" width="100">
+    <script>
+        // build 4 hàm tương ứng với 4 nút di chuyển
+        function up(){
+            let img=document.getElementById("img-nobita");
+            img.style.top=parseInt(img.style.top)-5+'px';
+        }
+        function down(){
+            let img=document.getElementById("img-nobita");
+            img.style.top=parseInt(img.style.top)+5+'px';
+        }
+        function left(){
+            let img=document.getElementById("img-nobita");
+            img.style.left=parseInt(img.style.left)-5+'px';
+        }
+        function right(){
+            let img=document.getElementById("img-nobita");
+            img.style.left=parseInt(img.style.left)+5+'px';
+        }
+        //hàm nhận biết nút di chuyển từ bàn phím
+        function move(direc){
+        //truyền tham số direc vào bằng cách lấy tham số từ các key trên bàn phím
+            switch(direc.keyCode){
+                case 37:
+                left();
+                break;
+                case 39:
+                right();
+                break;
+                case 38:
+                up();
+                break;
+                case 40:
+                down();
+                break;
+            }
+        }
+        //sự kiện chờ người dùng gỏ bàn phím sẻ thực thi
+        function ready(){
+            window.addEventListener('keydown',move);
+        }
+    </script>
+</body>
+</html>
