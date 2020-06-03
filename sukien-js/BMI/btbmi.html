@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        var cn=parseFloat(prompt('mời nhập số cân nặng, đơn vị kg'));
+        var cc=parseFloat(prompt('mời nhập chiều cao, đơn vị m'));
+        var bmi=cn/(cc*cc);
+        if(bmi<18.5){
+            document.getElementById("show").innerHTML="Underweight";
+        }
+        if(bmi>=18.5&&bmi<25.0){
+            document.getElementById("show").innerHTML="Normal";
+        }
+        if(bmi>=25.0&&bmi<30.0){
+            document.getElementById("show").innerHTML="Overweight";
+        }
+        if(bmi>=30.0){
+            document.getElementById("show").innerHTML="Obese";
+        }
+    </script>
+</body>
+</html>
