@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="sothang"><button type="button" onclick="tinhsongay();">tính số ngày</button> <br>
+    <div id="ketqua"></div>
+    <script>
+        function tinhsongay(){
+            let thang=parseInt(document.getElementById("sothang").value);
+            if(thang>12)
+            {
+                alert('số tháng không được vượt quá 12');
+            }
+            switch(thang){
+                case 1:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 2:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 28 hoặc 29 ngày";
+                    break;
+                }
+                case 3:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 4:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 30 ngày";
+                    break;
+                }
+                case 5:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 30 ngày";
+                    break;
+                }
+                case 7:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 8:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 9:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 30 ngày";
+                    break;
+                }
+                case 10:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+                case 11:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 30 ngày";
+                    break;
+                }
+                case 12:{
+                    document.getElementById("ketqua").innerHTML="Tháng "+thang+" có 31 ngày";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
