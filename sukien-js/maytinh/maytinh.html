@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <th colspan="7"><input type="text" id="result"></th>
+            </tr>
+            <tr>
+                <th><button type="button" value="1" onclick="result.value +=this.value">1</button></th>
+                <th></th>
+                <th><button type="button" value="2" onclick="result.value +=this.value">2</button></th>
+                <th></th>
+                <th><button type="button" value="3" onclick="result.value +=this.value">3</button></th>
+                <th></th>
+                <th><button value="+" onclick="result.value +=this.value">+</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" value="4" onclick="result.value +=this.value">4</button></th>
+                <th></th>
+                <th><button type="button" value="5" onclick="result.value +=this.value">5</button></th>
+                <th></th>
+                <th><button type="button" value="6" onclick="result.value +=this.value">6</button></th>
+                <th></th>
+                <th><button onclick="result.value +=this.value" value="-">-</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" value="7" onclick="result.value +=this.value">7</button></th>
+                <th></th>
+                <th><button type="button" value="8" onclick="result.value +=this.value">8</button></th>
+                <th></th>
+                <th><button type="button" value="9" onclick="result.value +=this.value">9</button></th>
+                <th></th>
+                <th><button onclick="result.value +=this.value" value="*">x</button></th>
+            </tr>
+            <tr>
+                <th><button value="c" onclick="result.value=''">C</button></th>
+                <th></th>
+                <th><button value="0" onclick="result.value+=this.value">0</button></th>
+                <th></th>
+                <th><button  value="=" onclick="result.value=eval(result.value)">=</button></th>
+                <th></th>
+                <th><button onclick="result.value +=this.value" value="/">/</button></th>
+            </tr>
+        </table>
+</body>
+</html>
