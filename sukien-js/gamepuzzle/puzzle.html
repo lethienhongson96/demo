@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="befor();">
+    <div>
+        <img src="" id="anhso1" onclick="changeimg1();">
+    </div>
+    <div>
+    <img src="" id="anhso2" onclick="changeimg2();">
+    </div>
+    <div>
+        <img src="" id="anhso3" onclick="changeimg3();">
+    </div>
+    <div>
+        <img src="" id="anhso4" onclick="changeimg4();">
+    </div>
+    <div>
+        <img src="" id="anhso5" onclick="changeimg5();">
+    </div>
+<script>
+    let arrRandom =[];
+    
+    var img1=['https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg'];
+    function changeimg1(){
+        arrRandom[0] = Math.floor(Math.random() * 3);
+        document.getElementById("anhso1").src=img1[arrRandom[0]];
+        kiemtra(0);
+    }
+    var img2=['https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg'];
+    function changeimg2(){
+        arrRandom[1] = Math.floor(Math.random() * 3);
+        document.getElementById("anhso2").src=img2[arrRandom[1]];
+        kiemtra(1);
+    }
+    var img3=['https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg'];
+    function changeimg3(){
+        arrRandom[2] = Math.floor(Math.random() * 3);
+        document.getElementById("anhso3").src=img3[arrRandom[2]];
+        kiemtra(2);
+    }
+    var img4=['https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg'];
+    function changeimg4(){
+        arrRandom[3] = Math.floor(Math.random() * 3);
+        document.getElementById("anhso4").src=img4[arrRandom[3]];
+        kiemtra(3);
+    }
+    var img5=['https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg',
+        'https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg'];
+    function changeimg5(){
+        
+        arrRandom[4] = Math.floor(Math.random() * 3);
+        document.getElementById("anhso5").src=img5[arrRandom[4]];
+        kiemtra(4);
+    }
+    function kiemtra(){
+        let check =false;
+        for(let i=1;i<arrRandom.length;i++)
+        {
+            if(arrRandom[0]==arrRandom[i])
+            {
+                check = true;
+            }
+            else{
+                return false;
+            }
+        }
+        if(check==true){
+            alert('hoàn thành');
+        }
+    }
+    function befor(){
+        changeimg1();
+        changeimg2();
+        changeimg3();
+        changeimg4();
+        changeimg5();
+    }
+</script>
+</body>
+</html>
