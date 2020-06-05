@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fast Good Cheap</title>
+  <meta name="description" content="You want a Fast, Good, and Cheap project?">
+  <!-- nhúng file css v -->
+  <link rel="stylesheet" type="text/css" href="cheapfastgood.css">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@nannerb" />
+  <meta name="twitter:creator" content="@nannerb" />
+  <meta name="twitter:title" content="Fast Good Cheap" />
+  <meta name="twitter:description" content="You want a Fast, Good, and Cheap project?" />
+  <meta name="twitter:url" content="http://fastgood.cheap" />
+  <meta name="twitter:image" content="http://fastgood.cheap/postcard.png" />
+
+  <meta property="og:url" content="http://fastgood.cheap" />
+  <meta property="og:image" content="http://fastgood.cheap/postcard.png" />
+  <meta property="og:title" content="Fast Good Cheap" />
+  <meta property="og:description" content="You want a Fast, Good, and Cheap project?" />
+
+  <link rel="icon" type="image/png" href="//fastgood.cheap/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="//fastgood.cheap/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="//fastgood.cheap/favicon-64x64.png" sizes="64x64">
+</head>
+
+<body>
+  <div class="container">
+    <input type="checkbox" id="fast">
+    <label class="red" for="fast">FAST</label>
+
+    <input type="checkbox" id="good">
+    <label class="green" for="good">GOOD</label>
+
+    <input type="checkbox" id="cheap">
+    <label class="blue" for="cheap">CHEAP</label>
+    <div class="such-an-elite-hacker">Come on, you can try harder than that.</div>
+  </div>
+  <footer>
+    <div class="share">
+      <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://fastgood.cheap&amp;title=Fast Good Cheap" target="_blank">
+        <svg viewBox="0 0 512 512">
+          <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+        </svg>
+      </a>
+      <a id="twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Ffastgood.cheap&amp;text=Fast Good Cheap" target="_blank">
+        <svg viewBox="0 0 512 512">
+          <path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="info">
+      By
+      <a href="https://twitter.com/nannerb" target="_blank" title="@nannerb on Twitter">@nannerb</a>, inspired by this
+      <a href="https://www.twitter.com/missingcloudltd/status/826203153934729218" target="_blank">tweet</a>
+    </div>
+  </footer>
+  <script>
+    document.querySelector('body').className = 'has-js';
+    var checked = [];
+    [].forEach.call(document.querySelectorAll('input[type="checkbox"]'), function (checkbox) {
+      checkbox.addEventListener('change', function (e) {
+        ga('send', 'event', 'checkbox', 'trigger');
+        if (checkbox.checked && checked.length === 2) {
+          var uncheckTarget = checked[Math.floor(Math.random() * checked.length)];
+          uncheckTarget.checked = false;
+        }
+        checked = document.querySelectorAll('input[type="checkbox"]:checked');
+      });
+    });
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-91249744-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

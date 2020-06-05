@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="check-good" value="good" onclick="kiemtra(checkgood,checkfast,checkcheap);">good <br>
+    <input type="checkbox" id="check-fast" value="fast" onclick="kiemtra(checkfast,checkgood,checkcheap);">fast <br>
+    <input type="checkbox" id="check-cheap" value="cheap" onclick="kiemtra(checkcheap,checkgood,checkfast);">cheap
+    <script>
+            let checkgood=document.getElementById('check-good');
+            let checkfast=document.getElementById('check-fast');
+            let checkcheap=document.getElementById('check-cheap');
+        function kiemtra(x,y,z){
+            if(x.checked==true)
+            {
+                if(y.checked==true&&z.checked==true)
+                {
+                    y.checked=false;
+                }
+            }
+        }
+        // arrcheckbox=[aftergood,afterfast,aftercheap];
+        // function kiemtragood(x){
+        //     if(document.getElementById(x).checked==true)
+        //     {
+        //         if((document.getElementById('check-fast').checked==true)&&(document.getElementById('check-cheap').checked==true)){
+        //             document.getElementById('check-fast').checked=false;
+        //         }
+        //     }
+        //     }
+        // function kiemtrafast(x){
+        //     if(document.getElementById(x).checked==true)
+        //     {
+        //         if((document.getElementById('check-good').checked==true)&&(document.getElementById('check-cheap').checked==true)){
+        //             document.getElementById('check-good').checked=false;
+        //         }
+        // }
+        // }
+        // function kiemtracheap(x){
+        //     if(document.getElementById(x).checked==true)
+        //     {
+        //         if((document.getElementById('check-good').checked==true)&&(document.getElementById('check-fast').checked==true)){
+        //             document.getElementById('check-fast').checked=false;
+        //         }
+        //     }
+        // }
+
+    </script>
+</body>
+</html>
