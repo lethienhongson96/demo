@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let diemkiemtra=parseInt(prompt('nhập điểmm bài kiểm tra: '));
+        let diemgiuaky=parseInt(prompt('nhập điểmm giữa kỳ: '));
+        let diemcuoiky=parseInt(prompt('nhập điểmm cuối kỳ: '));
+        let tb=(diemkiemtra+diemgiuaky+diemcuoiky)/3;
+        if(tb<5){
+            alert('học sinh yếu');
+        }
+        else if(tb>=5&&tb<8){
+            alert('học sinh khá');
+        }
+        else if(tb>=8&&tb<=10){
+            alert('học sinh giỏi');
+        }
+        else{
+            alert('số điểm không hợp lệ');
+        }
+    </script>
+</body>
+</html>
