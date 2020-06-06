@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let num;
+        let text='';
+        do{
+            num=prompt('nhập số từ 1 đến 10');
+            text+=num;
+        }while(num>=1&&num<=10)
+        document.getElementById('hienthi').innerHTML='những số bạn vừa nhập là: '+text;
+    </script>
+</body>
+</html>
