@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=parseInt(prompt('mời nhập một số nguyên: '));
+        let cout=0;
+        let check=0;
+        let j=2;
+        let cacsonguyento='';
+        while(cout<number)
+        {
+            check =0;
+            for(let i=2;i<=Math.sqrt(j);i++){
+                if(j%i==0){
+                    check++;
+                }
+            }
+            if(check===0){
+                cout+=1;
+                cacsonguyento+=j+',';
+            }
+            j++;
+        }
+        alert(cacsonguyento);
+    </script>
+</body>
+</html>
