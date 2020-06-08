@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrvd=[-3,5,1,3,2,10];
+        document.write('thứ tự của mảng lúc chưa thay đổi: '+arrvd+'<br>');
+        let fist=0;
+        let last=arrvd.length-1;
+        let b;
+        while(fist<last){
+            b=arrvd[fist];
+            arrvd[fist]=arrvd[last];
+            arrvd[last]=b;
+            fist++;
+            last--;
+        }
+        document.write('thứ tự của mảng sau khi thay đổi: '+arrvd);
+    </script>
+</body>
+</html>

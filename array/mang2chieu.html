@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='display'></div>
+    <button type="button" onclick="thaydoi();">change value</button>
+    <script>
+        let arr2way=[];
+        let hienthi='';
+        for (let i = 0; i < 5; i++) {
+            arr2way[i] = new Array(0, 0, 0, 0, 0);
+        }
+        for(let i=0;i<5;i++){
+            for(let  j=0;j<5;j++){
+                hienthi+=arr2way[i][j]+ "&nbsp;&nbsp;";
+            }
+            hienthi+='<br>';
+        }
+        document.getElementById('display').innerHTML=hienthi;
+        function thaydoi(){
+            let x=parseInt(prompt('dòng thứ: '));
+            let y=parseInt(prompt('hàng thứ: '));
+            hienthi='';
+            arr2way[x-1][y-1]='x';
+            for(let i=0;i<5;i++){
+                for(let  j=0;j<5;j++){
+                    hienthi+=arr2way[i][j]+ "&nbsp;&nbsp;";
+                }
+                hienthi+='<br>';
+            }
+            document.getElementById('display').innerHTML=hienthi;
+        }
+    </script>
+</body>
+</html>
