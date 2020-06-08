@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sample screen:</h1>
+    <input type="text" id="phantu">
+    <button type="button" onclick="addarr()">add</button>
+    <button type="button" onclick="displayarr()">display</button><br>
+    <div id="hienthi"></div>
+    <script>
+        i=0;
+        let arrdata=[];
+        function addarr(){
+            let a=document.getElementById('phantu').value;
+            arrdata[i]=a;
+            i++;
+            document.getElementById('phantu').value='';
+        }
+        function displayarr(){
+            document.getElementById('hienthi').innerHTML=arrdata;
+        }
+    </script>
+</body>
+</html>
