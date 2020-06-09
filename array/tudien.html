@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="vocabulary" oninput="tudien();">
+    <div id="display"></div>
+    <script>
+        function tudien(){
+        let arreng=['hello','thanks','sorry','go'];
+        let arrvi=['xin chào','cảm ơn','xin lỗi','đi'];
+        let voca=document.getElementById('vocabulary').value;
+        let hienthi='';
+        for(let i=0;i<arreng.length;i++){
+            if(arreng[i]===voca){
+                hienthi=arrvi[i];
+            }
+        }
+        document.getElementById('display').innerHTML=hienthi;
+        }
+    </script>
+</body>
+</html>

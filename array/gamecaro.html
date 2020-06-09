@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .phanthan {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="phanthan">
+    <div id='display'></div>
+    <button type="button" onclick="thaydoi('x');">người số 1</button>
+    <button type="button" onclick="thaydoi('o');">người số 2</button>
+    <script>
+        let arr2way=[];
+        let hienthi='';
+        for (let i = 0; i < 5; i++) {
+            arr2way[i] = new Array('.', '.', '.', '.', '.');
+        }
+        for(let i=0;i<5;i++){
+            for(let  j=0;j<5;j++){
+                hienthi+=arr2way[i][j]+ "&nbsp;&nbsp;&nbsp;";
+            }
+            hienthi+='<br>';
+        }
+        document.getElementById('display').innerHTML=hienthi;
+        function thaydoi(chess){
+            let x=parseInt(prompt('dòng thứ: '));
+            let y=parseInt(prompt('hàng thứ: '));
+            hienthi='';
+            arr2way[x-1][y-1]=chess;
+            checkWin(x-1, y-1);
+            for(let i=0;i<5;i++){
+                for(let  j=0;j<5;j++){
+                    hienthi+=arr2way[i][j]+ "&nbsp;&nbsp;";
+                }
+                hienthi+='<br>';
+            }
+            document.getElementById('display').innerHTML=hienthi;
+        }
+        function checkWin(i,j){
+            if(arr2way[i][j]===arr2way[i][j-1] && arr2way[i][j]===arr2way[i][j-2] || arr2way[i][j]===arr2way[i][j+1] && arr2way[i][j]===arr2way[i][j+2]){
+                alert('win');
+            }
+            if(arr2way[i][j]===arr2way[i-1][j]&&arr2way[i][j]===arr2way[i-2][j] || arr2way[i][j]===arr2way[i+1][j]&&arr2way[i][j]===arr2way[i+2][j]){
+                alert('win');
+            }
+        }
+            // for(let i=0;i<5;i++){
+            //     for(let  j=0;j<5;j++){
+            //         if(arr2way[i][j]==arr2way[i][j-1]&&arr2way[i][j]==arr2way[i][j+1])
+            //         {
+            //             alert('bạn đả chiến thắng!');
+            //         }
+            // }
+    </script>
+</body>
+</html>
