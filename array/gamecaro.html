@@ -32,7 +32,6 @@
             let y=parseInt(prompt('hàng thứ: '));
             hienthi='';
             arr2way[x-1][y-1]=chess;
-            checkWin(x-1, y-1);
             for(let i=0;i<5;i++){
                 for(let  j=0;j<5;j++){
                     hienthi+=arr2way[i][j]+ "&nbsp;&nbsp;";
@@ -40,12 +39,16 @@
                 hienthi+='<br>';
             }
             document.getElementById('display').innerHTML=hienthi;
+            checkWin(x-1, y-1);
         }
         function checkWin(i,j){
             if(arr2way[i][j]===arr2way[i][j-1] && arr2way[i][j]===arr2way[i][j-2] || arr2way[i][j]===arr2way[i][j+1] && arr2way[i][j]===arr2way[i][j+2]){
                 alert('win');
             }
-            if(arr2way[i][j]===arr2way[i-1][j]&&arr2way[i][j]===arr2way[i-2][j] || arr2way[i][j]===arr2way[i+1][j]&&arr2way[i][j]===arr2way[i+2][j]){
+            if(arr2way[i][j]===arr2way[i-1][j] && arr2way[i][j]===arr2way[i-2][j] || arr2way[i][j]===arr2way[i+1][j] && arr2way[i][j]===arr2way[i+2][j]){
+                alert('win');
+            }
+            if(arr2way[i][j]===arr2way[i-1][j-1]&&arr2way[i][j]===arr2way[i-2][j-2] || arr2way[i][j]===arr2way[i+1][j+1]&&arr2way[i][j]===arr2way[i+2][j+2]){
                 alert('win');
             }
         }
