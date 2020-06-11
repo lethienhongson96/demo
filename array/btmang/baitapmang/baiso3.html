@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrsonguyen=[1,2,12,11,3,20,5,6,13,15];
+        let max=arrsonguyen[0];
+        let tb=0;
+        let tbarray;
+        for(let i=1;i<arrsonguyen.length;i++){
+            if(arrsonguyen[i]>max){
+                max=arrsonguyen[i];
+            }
+            tb+=arrsonguyen[i];
+        }
+        tbarray=(arrsonguyen[0]+tb)/arrsonguyen.length;
+        document.write('số lớn nhất là: '+max+'<br>'+' trung bình của các số trong mảng là: '+tbarray);
+        // console.log(arrsonguyen);
+    </script>
+</body>
+</html>
