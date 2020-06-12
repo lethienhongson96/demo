@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1= [3, 5, 1, 8, -3, 7, 8];
+        let arr2= [7, 12, 6, 9, 20, 56, 89];
+        let arr3= [0, 0, 0, 0, 0, 0];
+        function array(mang){
+            let min=mang[0];
+            for(let i=1;i<mang.length;i++){
+                if(mang[i]<min){
+                    min=mang[i];
+                }
+            }
+            return min;
+        }
+        let soNhoNhat1=array(arr1);
+        document.write('số nhỏ nhất trong mảng 1 là: '+soNhoNhat1+'<br>');
+        let soNhoNhat2=array(arr2);
+        document.write('số nhỏ nhất trong mảng 2 là: '+soNhoNhat2+'<br>');
+        let soNhoNhat3=array(arr3);
+        document.write('số nhỏ nhất trong mảng 3 là: '+soNhoNhat3);
+    </script>
+</body>
+</html>

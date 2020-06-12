@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="nhập số feet" oninput="feetToMeter(this.value)" id="feetnum"> <br>
+    số meter: <span id="resultfeet"></span> <br>
+    <input type="text" placeholder="nhập số meter" oninput="meTerToFeet(this.value)" id="meternum"> <br>
+    số feet: <span id="resultmeter"></span>
+    <script>
+        function feetToMeter(feet){
+            let meter=0.305 * feet;
+            document.getElementById('resultfeet').innerHTML=meter;
+        }
+        function meTerToFeet(meter){
+            let feet = 3.279 * meter;
+            document.getElementById('resultmeter').innerHTML=feet;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <h2>mời nhập độ F vào ô nhập</h2>
+    F <input type="number" onclick="chuyenDoiNhietDo(this.value);" id="dof" placeholder="more or less"> <br>
+    C: <span id="hienthi"></span>
+    <script>
+        function chuyenDoiNhietDo(nhietdof){
+            // let textbox=document.getElementById('dof').value;
+            let F=parseInt(nhietdof);
+            let doC=(F-32)/1.8;
+            
+            document.getElementById('hienthi').innerHTML=doC;
+        }
+    </script>
+</body>
+</html>

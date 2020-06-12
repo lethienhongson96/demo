@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function soNguyenTo(number){
+            let check=false;
+            for(let i=2;i<number;i++){
+                if(number%i==0){
+                    check=true;
+                }
+            }
+            return check;
+        }
+        for(j=2;j<10000;j++){
+            if(soNguyenTo(j)==false){
+                document.write(j+',');
+            }
+        }
+    </script>
+</body>
+</html>
