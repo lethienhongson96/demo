@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrNgoiSao=['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+        let arrChomSao=['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+        function kiemTraVaXuatSao(ngoiSao){
+            let check=false;
+            let vitri;
+            for(i=0;i<arrNgoiSao.length;i++){
+                if(ngoiSao==arrNgoiSao[i]){
+                    check=true;
+                    loca=i;
+                }
+            }
+            if(check){
+                return arrChomSao[loca];
+            }
+            else{
+                return mess='không tìm thấy ngôi sao tương ứng';
+            }
+        }
+        let inputstring=prompt('mời nhập tên ngôi sao:');
+        document.write('tên của chòm sao là: '+kiemTraVaXuatSao(inputstring));
+    </script>
+</body>
+</html>

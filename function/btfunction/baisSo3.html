@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tạo hàm kiểm tra xem số thứ nhất lớn hơn hay bé hơn số thứ hai!
+        function kiemTra(num1,num2){
+            //nếu số thứ nhất lớn hơn thì trả về một chuỗi
+            if(num1>num2){
+                mess='số '+num1+' lớn hơn '+num2;
+                return mess;
+            }
+            //nếu số thứ nhất bé hơn thì cộng hai số đó lại
+            else{
+                sum=num1+num2;
+                sumstring='tổng của hai số là: '+sum;
+                return sumstring;
+            }
+        }
+        let soThuNhat=+prompt('mời nhập số thứ nhất!');
+        let soThuHai=+prompt('mời nhập số thứ hai!');
+        document.write(kiemTra(soThuNhat,soThuHai));
+    </script>
+</body>
+</html>
