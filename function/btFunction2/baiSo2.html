@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pi=3.14;
+        function tinhDienTichHinhTron(r){
+            chuVi=r*r*pi;
+            return chuVi;
+        }
+        function tinhChuViHinhTron(r){
+            dienTich=r*2*pi;
+            return dienTich;
+        }
+        let banKinh=+prompt('mời nhập bán kính:');
+        document.write('diện tích hình tròn là: '+tinhDienTichHinhTron(banKinh)+'<br>');
+        document.write('chu vi hình tròn là: '+tinhChuViHinhTron(banKinh));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1=parseInt(prompt('nhập số thứ nhất: '));
+        let number2=parseInt(prompt('nhập số thứ hai: '));
+        function doiCho(num1,num2){
+            tranfer=num1;
+            num1=num2;
+            num2=tranfer;
+            stringnum='số thứ nhất là: '+num1+' số thứ hai là: '+num2;
+            return stringnum;
+        }
+        document.write(doiCho(number1,number2));
+    </script>
+</body>
+</html>

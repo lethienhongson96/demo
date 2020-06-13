@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkSoLanXuatHien(arr,phantu){
+            let count=0;
+            for(let i=0;i<arr.length;i++){
+                if(phantu==arr[i]){
+                    count+=1;
+                }
+            }
+            if(count==0){
+                count=-1;
+            }
+            return count;
+        }
+        let arraystring=['hello','goodbye','seeyou','hello'];
+        let kytubatky=prompt('mời nhập ký tự');
+        document.write(checkSoLanXuatHien(arraystring,kytubatky));
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isMin(num1,num2,num3){
+            min=num1;
+            if(num2<min){
+                min=num2;
+            }
+            if(num3<min){
+                min=num3;
+            }
+            return min;
+        }
+        let so1=parseInt(prompt('mời nhập số thứ nhất: '));
+        let so2=parseInt(prompt('mời nhập số thứ hai: '));
+        let so3=parseInt(prompt('mời nhập số thứ ba: '));
+        document.write(isMin(so1,so2,so3));
+    </script>
+</body>
+</html>

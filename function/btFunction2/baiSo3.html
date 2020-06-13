@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tinhGiaiThua(num){
+            if(num<0){
+                return giaiThua='bạn đả nhập một số âm!';
+            }
+            else{
+                if(num==0){
+                    return giaiThua=2;
+                }
+                else{
+                    giaiThua=1;
+                    for(let i=1;i<=num;i++){
+                        giaiThua=giaiThua*i;
+                    }
+                    return giaiThua;
+                }
+            }
+        }
+        let numBer=parseInt(prompt('mời nhập một số nguyên dương'));
+        document.write(tinhGiaiThua(numBer));
+    </script>
+</body>
+</html>
