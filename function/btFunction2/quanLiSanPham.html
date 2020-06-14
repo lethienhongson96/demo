@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: green;
+            color: honeydew;
+        }
+        .div-add{
+            width: 300px;
+            height: 70px;
+            background-color:lightgray;
+        }
+        .div-conten{
+            padding-top: 25px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add new product</h1>
+    <div class="div-add">
+        <div class="div-conten">
+            <input type="text" placeholder="new product" id="product">
+            <button type="button" id="btn-add" class="btn" onclick="loadDaTa()">Add</button>
+        </div>
+    </div>
+    <h1>Display All Prooduct</h1>
+    <span>product name</span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span id="soluong">0</span> 
+    <div id="display"></div>
+    <script>
+        let arrdata=[];
+        function loadDaTa(){
+            let datainput=document.getElementById('product').value;
+            let tableProduct='<table border:1px>';
+            if(datainput.length>0){
+                arrdata.push(datainput);
+            }
+            for(i=0;i<arrdata.length;i++){
+                tableProduct+='<tr>';
+                tableProduct+='<th>'+arrdata[i]+'</th>'+`<td><button type="button" value=${i} onclick="eDitDaTa(this.value)">edit</button></td>`+
+                `<td><button type="button" id="btn-delete" value=${i} onclick="deLeTeDaTa(this.value)">delete</button></td>`;
+                tableProduct+='</tr>';
+                // document.getElementById('soluong').innerHTML=arrdata.length;
+            }
+            tableProduct+='</table>';
+            document.getElementById('display').innerHTML=tableProduct;
+            document.getElementById('soluong').innerHTML=arrdata.length + ' Product';
+            document.getElementById('product').value='';
+        }
+        function deLeTeDaTa(loca){
+            for(let i=0;i<arrdata.length;i++){
+                if(loca==i){
+                    arrdata.splice(i,1);
+                }
+            }
+            loadDaTa();
+        }
+        function eDitDaTa(loca){
+            for(let i=0;i<arrdata.length;i++){
+                if(loca==i){
+                    document.getElementById('product').value=arrdata[i];
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
